@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Verification Complete</title>
+<style>
+    body {
+        background-color: rgb(128, 54, 54);
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        color: rgb(255, 155, 155);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+        min-height: 100vh;
+        text-align: center;
+    }
+
+    h1 {
+        font-size: 2em;
+        margin-bottom: 1em;
+    }
+
+    p {
+        font-size: 1em;
+        margin: 0.5em 0;
+        max-width: 500px;
+        line-height: 1.5;
+    }
+
+    @media (max-width: 480px) {
+        h1 { font-size: 1.5em; }
+        p { font-size: 0.95em; }
+    }
+</style>
+</head>
+<body>
+    <h1>Verification Complete</h1>
+    <p>We are now looking to put you as a demo member, please have patience.</p>
+    <p>You can contact us if we delayed your process.</p>
+
+    <script>
+        // Mark user as verified in localStorage
+        localStorage.setItem("verified", "true");
+    </script>
+</body>
+</html>

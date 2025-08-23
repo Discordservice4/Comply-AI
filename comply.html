@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comply AI</title>
+    <style>
+        body {
+             background: linear-gradient(135deg, #803636, #b05757);
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            color: rgb(255, 155, 155);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        h1 span {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        .p1 {
+            text-align: center;
+            text-decoration: underline;
+            margin-top: 20px;
+        }
+
+        .menu-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin: 40px 0;
+        }
+
+        .menu {
+  cursor: pointer;
+  text-decoration: underline;
+  transition: color 0.3s, transform 0.2s;
+}
+.menu:hover {
+  color: #fff;
+  transform: scale(1.05);
+}
+
+
+   button {
+    background-color: rgb(128, 54, 54);
+    border: 2px solid rgb(255, 155, 155);
+    border-radius: 12px;
+    padding: 10px 20px;
+    font-size: 20px;
+    color: rgb(255, 155, 155);
+    cursor: pointer;
+    margin-bottom: 15px; /* spacing between buttons */
+}
+
+.notes-btn {
+    margin-top: 10px; /* space above Notes button */
+}
+
+@media (max-width: 480px) {
+    button {
+        width: 80%;
+        font-size: 18px;
+    }
+}
+
+        button:active{
+            background-color: rgb(255, 155, 155);
+            color: rgb(128, 54, 54);
+        }
+        button:focus {
+  outline: 2px solid rgb(255, 155, 155);
+}
+    </style>
+</head>
+<body>
+    <h1>Comply <span>AI</span></h1>
+    <p class="p1">Demo Snap AI for Video-Photo Generation</p>
+    
+    <div class="menu-container">
+        <p class="menu">Home</p>
+        <p class="menu">Try It Out For Free</p>
+        <p class="menu">About Us</p>
+        <p class="menu">Contact Us</p>
+    </div>
+
+<a href="verify.html"><button>Verify</button></a>
+<a href="notes.html"><button class="notes-btn">Notes</button></a>
+
+   <script>
+    document.querySelectorAll(".menu").forEach(function(item) {
+        item.onclick = function() {
+            alert("Verification Needed, Please Try Again Later");
+        };
+    });
+</script>
+
+</body>
+</html>

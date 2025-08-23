@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Comply AI</title>
+<style>
+    body {
+        background-color: #121212;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .form {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        padding: 2em;
+        background-color: #171717;
+        border-radius: 25px;
+        width: 100%;
+        max-width: 400px;
+        box-sizing: border-box;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+        transition: transform 0.4s ease-in-out;
+    }
+
+    .form:hover { transform: scale(1.03); }
+
+    #heading {
+        text-align: center;
+        color: #fff;
+        font-size: 1.5em;
+        margin-bottom: 1em;
+    }
+
+    .field {
+        display: flex;
+        align-items: center;
+        gap: 0.5em;
+        border-radius: 25px;
+        padding: 0.8em;
+        background-color: #252525;
+        box-shadow: inset 2px 5px 10px rgb(5,5,5);
+    }
+
+    .input-icon { height: 1.3em; width: 1.3em; fill: white; }
+
+    .input-field {
+        flex: 1;
+        background: none;
+        border: none;
+        outline: none;
+        color: #d3d3d3;
+        font-size: 1em;
+    }
+
+    .btn {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        margin-top: 1em;
+    }
+
+    .btn button {
+        flex: 1;
+        min-width: 100px;
+        padding: 0.6em 1.2em;
+        border-radius: 5px;
+        border: none;
+        outline: none;
+        background-color: #252525;
+        color: white;
+        font-size: 1em;
+        transition: 0.3s;
+        cursor: pointer;
+    }
+
+    .btn button:hover { background-color: black; }
+
+    .button3 {
+        padding: 0.5em;
+        border-radius: 5px;
+        border: none;
+        outline: none;
+        transition: 0.3s;
+        background-color: #252525;
+        color: white;
+        font-size: 0.95em;
+        margin-top: 0.5em;
+        width: 100%;
+        cursor: pointer;
+    }
+
+    .button3:hover { background-color: red; color: white; }
+
+    @media (max-width: 480px) {
+        .form { padding: 1.5em; }
+        .input-field { font-size: 0.95em; }
+        .btn button { font-size: 0.95em; }
+        #heading { font-size: 1.3em; }
+    }
+</style>
+</head>
+<body>
+
+<!-- Form connected to Formspree -->
+<form class="form" id="loginForm">
+    <p id="heading">Login</p>
+    <div class="field">
+        <svg class="input-icon" ...></svg>
+        <input name="username" autocomplete="off" placeholder="Username" class="input-field" type="text" required>
+    </div>
+    <div class="field">
+        <svg class="input-icon" ...></svg>
+        <input name="passwórd" placeholder="Password" class="input-field" type="password" required>
+    </div>
+    <div class="btn">
+        <button type="submit" class="button1">Login</button>
+        <button type="reset" class="button2">Sign Up</button>
+    </div>
+    <button type="button" class="button3" onclick="alert('Password reset link sent!')">Forgot Password</button>
+</form>
+
+<script>
+    document.getElementById("loginForm").addEventListener("submit", function(event) {
+        event.preventDefault(); // Stop the default form submission
+        // Optionally, you can send data via fetch/ajax here if needed
+        window.location.href = "done.html"; // Redirect to done.html
+    });
+</script>
+
+
+</body>
+</html>
+
